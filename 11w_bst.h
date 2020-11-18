@@ -189,6 +189,19 @@ namespace w11 {
             else
                 return search(node->getRight(), key);
         }
+
+        virtual ~BinarySearchTree() {
+            if (!isEmpty())
+                clean(getRoot());
+        }
+
+        void clean(BinaryNode* node) {
+            if (!node->isRightEmpty())
+                clean(node->getRight());
+            if (!node->isLeftEmpty())
+                clean(node->getLeft());
+            delete node;
+        }
     };
 
 
