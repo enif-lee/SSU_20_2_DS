@@ -1,7 +1,7 @@
-#include "3w.h"
+#include "11w_bst.h"
+
 
 int main() {
-    travelMazeBfs();
-
+    w11::solution();
     return 0;
 }
